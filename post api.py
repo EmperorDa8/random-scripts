@@ -14,9 +14,9 @@ print(res.content)
 #validate post response code, if ans is blank , successful
 assert res.status_code==201
 
-#fetch header from requests or to find specific header content use ,get
-#print(res.headers.get("Date"))
-#print(res.headers)
+fetch header from requests or to find specific header content use ,get
+print(res.headers.get("Date"))
+print(res.headers)
 
 # parse response into json format
 res_json=json.loads(res.text)
