@@ -14,8 +14,8 @@ def getstock_data(symbol):
 
     # to find tag with stock price element
     stock_data={
-    f"{symbol}>>ope_price":soup.find("div",{"class":"D(ib) Mend(20px)"}).find_all("span")[0].text,
-    f"{symbol}>>change":soup.find("div",{"class":"D(ib) Mend(20px)"}).find_all("span")[1].text
+    f"{symbol}>>open_price":soup.find("div",{"class":"D(ib) Mend(20px)"}).find_all("span")[0].text,
+    f"{symbol}>>changes":soup.find("div",{"class":"D(ib) Mend(20px)"}).find_all("span")[1].text
     }
     return stock_data
 
