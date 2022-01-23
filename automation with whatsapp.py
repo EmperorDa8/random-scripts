@@ -1,9 +1,9 @@
 from selenium import webdriver
 url="https://web.whatsapp.com/"
-
 driverpath="Downloads//chromedriver.exe"
 dr=webdriver.Chrome(driverpath)
 dr.get(url)    
+#this function will recieve input for name and messsage to send
 
 def message_chat():
     
@@ -18,8 +18,7 @@ def message_chat():
     for m in range(count):
         text_input.send_keys(message)
         butn_send=dr.find_element_by_class_name('_4sWnG').click()
-        
-        
+                
         
 def nn():
     print("do you want send the chat ?")
