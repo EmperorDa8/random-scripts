@@ -1,3 +1,3 @@
 
 # random-scripts
-I am editing the README file. Adding some more details about the project description.
+this are random scripts written for my training, and some experimental python scripts
