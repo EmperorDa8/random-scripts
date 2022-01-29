@@ -2,17 +2,15 @@ import re
 
 
 def extract_pid(log_line):
-    regex = r"\[(\d+)\]\W .[A-Z]*"
+    regex = r"\[(\d+)\]\W (.[A-Z]*)"
     result = re.search(regex, log_line)
-    return result
-    if result is None:
-        return None
-    return "{} ({})".format(result[2],result[1])
+    if result == None:
+        return "nothing"
+    return "{} ({})".format(result[1],result[2])
 
 print(extract_pid("July 31 07:51:48 mycomputer bad_process[12345]: ERROR Performing package upgrade")) # 12345 (ERROR)
-#print(extract_pid("99 elephants in a [cage]")) # None
-#print(extract_pid("A string that also has numbers [34567] but no uppercase message")) # None
-#print(extract_pid("cc")) # 67890 (RUNNING)
+print(extract_pid("99 elephants in a [cage]")) # None
+print(extract_pid("A string that also has numbers [34567] but no uppercase message")) # None
 
 def transform_record(record):
     new_record = re.sub(r",[\d]",r",+1-",record)

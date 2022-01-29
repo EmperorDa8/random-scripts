@@ -1,8 +1,8 @@
 
 def word(texts):
-    name=input("enter a name: ")
-    if not name.isalpha() :
-    raise NameError("pls enter a character!")
+    name=input("enter a name:")
+    if not name.isalpha():
+        raise NameError("pls enter a character!")
     rr=(f"{name}@gmail.com")
     return rr
 
@@ -22,5 +22,7 @@ def grade_score(grade):
         print("90%")
     elif grade == "B":
         print("45%")
+    else:
+        raise ValueError("incorrect input character")
 
 grade_score("60")
