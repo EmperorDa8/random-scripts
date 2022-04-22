@@ -14,7 +14,7 @@ class Yahoofinance(unittest.TestCase):
     
     def test_yahoo(self):
         self.browser.get("https://finance.yahoo.com/")
-        # to find items on the search bar using id and enter key
+        # to find items on the search bar using xpath and enter key
         self.browser.find_element_by_xpath('//*[@id="yfin-usr-qry"]').send_keys("NFT")
         self.browser.find_element_by_xpath('//*[@id="header-desktop-search-button"]').click()
         # to print the page source
@@ -22,10 +22,10 @@ class Yahoofinance(unittest.TestCase):
     
     def test_yahoo2(self):
         self.browser.get("https://finance.yahoo.com/")
-        # to find items on the search bar using id and enter key
+        # to find items on the search bar using xpath and enter key
         self.browser.find_element_by_xpath('//*[@id="yfin-usr-qry"]').send_keys("ETH")
         self.browser.find_element_by_xpath('//*[@id="header-desktop-search-button"]').click()
-        # to print the page source
+        
     @classmethod
     def tearDownClass(cls):
         cls.browser.close()

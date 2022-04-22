@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2022-04-22 03:12:25</p>
+                <p class='attribute'><strong>Duration: </strong>43.69 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 3, Pass: 0, Error: 3</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.Youtube_Testing</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">testpart1</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A37413+2389011]
+	Ordinal0 [0x009C9F61+1941345]
+	Ordinal0 [0x008BC520+836896]
+	Ordinal0 [0x008E48E3+1001699]
+	Ordinal0 [0x008E3FBE+999358]
+	Ordinal0 [0x0090414C+1130828]
+	Ordinal0 [0x008DF974+981364]
+	Ordinal0 [0x00904364+1131364]
+	Ordinal0 [0x00914302+1196802]
+	Ordinal0 [0x00903F66+1130342]
+	Ordinal0 [0x008DE546+976198]
+	Ordinal0 [0x008DF456+980054]
+	GetHandleVerifier [0x00BE9632+1727522]
+	GetHandleVerifier [0x00C9BA4D+2457661]
+	GetHandleVerifier [0x00ACEB81+569713]
+	GetHandleVerifier [0x00ACDD76+566118]
+	Ordinal0 [0x009D0B2B+1968939]
+	Ordinal0 [0x009D5988+1989000]
+	Ordinal0 [0x009D5A75+1989237]
+	Ordinal0 [0x009DECB1+2026673]
+	BaseThreadInitThunk [0x7568FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x76F97A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x76F97A4E+238]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\USER\testfolder\youtube_test.py", line 16, in testpart1
+    self.browser.find_element_by_id('search').send_keys("halo")
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 540, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A37413+2389011]
+	Ordinal0 [0x009C9F61+1941345]
+	Ordinal0 [0x008BC520+836896]
+	Ordinal0 [0x008E48E3+1001699]
+	Ordinal0 [0x008E3FBE+999358]
+	Ordinal0 [0x0090414C+1130828]
+	Ordinal0 [0x008DF974+981364]
+	Ordinal0 [0x00904364+1131364]
+	Ordinal0 [0x00914302+1196802]
+	Ordinal0 [0x00903F66+1130342]
+	Ordinal0 [0x008DE546+976198]
+	Ordinal0 [0x008DF456+980054]
+	GetHandleVerifier [0x00BE9632+1727522]
+	GetHandleVerifier [0x00C9BA4D+2457661]
+	GetHandleVerifier [0x00ACEB81+569713]
+	GetHandleVerifier [0x00ACDD76+566118]
+	Ordinal0 [0x009D0B2B+1968939]
+	Ordinal0 [0x009D5988+1989000]
+	Ordinal0 [0x009D5A75+1989237]
+	Ordinal0 [0x009DECB1+2026673]
+	BaseThreadInitThunk [0x7568FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x76F97A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x76F97A4E+238]
+
+C:\Users\USER\testfolder\youtube_test.py:16: DeprecationWarning: find_element_by_* commands are deprecated. Please use find_element() instead
+  self.browser.find_element_by_id('search').send_keys("halo")
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">testpart2</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A37413+2389011]
+	Ordinal0 [0x009C9F61+1941345]
+	Ordinal0 [0x008BC520+836896]
+	Ordinal0 [0x008E48E3+1001699]
+	Ordinal0 [0x008E3FBE+999358]
+	Ordinal0 [0x0090414C+1130828]
+	Ordinal0 [0x008DF974+981364]
+	Ordinal0 [0x00904364+1131364]
+	Ordinal0 [0x00914302+1196802]
+	Ordinal0 [0x00903F66+1130342]
+	Ordinal0 [0x008DE546+976198]
+	Ordinal0 [0x008DF456+980054]
+	GetHandleVerifier [0x00BE9632+1727522]
+	GetHandleVerifier [0x00C9BA4D+2457661]
+	GetHandleVerifier [0x00ACEB81+569713]
+	GetHandleVerifier [0x00ACDD76+566118]
+	Ordinal0 [0x009D0B2B+1968939]
+	Ordinal0 [0x009D5988+1989000]
+	Ordinal0 [0x009D5A75+1989237]
+	Ordinal0 [0x009DECB1+2026673]
+	BaseThreadInitThunk [0x7568FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x76F97A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x76F97A4E+238]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\USER\testfolder\youtube_test.py", line 21, in testpart2
+    self.browser.find_element_by_id('search').send_keys("python")
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 540, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A37413+2389011]
+	Ordinal0 [0x009C9F61+1941345]
+	Ordinal0 [0x008BC520+836896]
+	Ordinal0 [0x008E48E3+1001699]
+	Ordinal0 [0x008E3FBE+999358]
+	Ordinal0 [0x0090414C+1130828]
+	Ordinal0 [0x008DF974+981364]
+	Ordinal0 [0x00904364+1131364]
+	Ordinal0 [0x00914302+1196802]
+	Ordinal0 [0x00903F66+1130342]
+	Ordinal0 [0x008DE546+976198]
+	Ordinal0 [0x008DF456+980054]
+	GetHandleVerifier [0x00BE9632+1727522]
+	GetHandleVerifier [0x00C9BA4D+2457661]
+	GetHandleVerifier [0x00ACEB81+569713]
+	GetHandleVerifier [0x00ACDD76+566118]
+	Ordinal0 [0x009D0B2B+1968939]
+	Ordinal0 [0x009D5988+1989000]
+	Ordinal0 [0x009D5A75+1989237]
+	Ordinal0 [0x009DECB1+2026673]
+	BaseThreadInitThunk [0x7568FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x76F97A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x76F97A4E+238]
+
+C:\Users\USER\testfolder\youtube_test.py:21: DeprecationWarning: find_element_by_* commands are deprecated. Please use find_element() instead
+  self.browser.find_element_by_id('search').send_keys("python")
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">testpart3</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A37413+2389011]
+	Ordinal0 [0x009C9F61+1941345]
+	Ordinal0 [0x008BC520+836896]
+	Ordinal0 [0x008E48E3+1001699]
+	Ordinal0 [0x008E3FBE+999358]
+	Ordinal0 [0x0090414C+1130828]
+	Ordinal0 [0x008DF974+981364]
+	Ordinal0 [0x00904364+1131364]
+	Ordinal0 [0x00914302+1196802]
+	Ordinal0 [0x00903F66+1130342]
+	Ordinal0 [0x008DE546+976198]
+	Ordinal0 [0x008DF456+980054]
+	GetHandleVerifier [0x00BE9632+1727522]
+	GetHandleVerifier [0x00C9BA4D+2457661]
+	GetHandleVerifier [0x00ACEB81+569713]
+	GetHandleVerifier [0x00ACDD76+566118]
+	Ordinal0 [0x009D0B2B+1968939]
+	Ordinal0 [0x009D5988+1989000]
+	Ordinal0 [0x009D5A75+1989237]
+	Ordinal0 [0x009DECB1+2026673]
+	BaseThreadInitThunk [0x7568FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x76F97A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x76F97A4E+238]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\USER\testfolder\youtube_test.py", line 26, in testpart3
+    self.browser.find_element_by_id('search').send_keys("edureka")
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 540, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A37413+2389011]
+	Ordinal0 [0x009C9F61+1941345]
+	Ordinal0 [0x008BC520+836896]
+	Ordinal0 [0x008E48E3+1001699]
+	Ordinal0 [0x008E3FBE+999358]
+	Ordinal0 [0x0090414C+1130828]
+	Ordinal0 [0x008DF974+981364]
+	Ordinal0 [0x00904364+1131364]
+	Ordinal0 [0x00914302+1196802]
+	Ordinal0 [0x00903F66+1130342]
+	Ordinal0 [0x008DE546+976198]
+	Ordinal0 [0x008DF456+980054]
+	GetHandleVerifier [0x00BE9632+1727522]
+	GetHandleVerifier [0x00C9BA4D+2457661]
+	GetHandleVerifier [0x00ACEB81+569713]
+	GetHandleVerifier [0x00ACDD76+566118]
+	Ordinal0 [0x009D0B2B+1968939]
+	Ordinal0 [0x009D5988+1989000]
+	Ordinal0 [0x009D5A75+1989237]
+	Ordinal0 [0x009DECB1+2026673]
+	BaseThreadInitThunk [0x7568FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x76F97A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x76F97A4E+238]
+
+C:\Users\USER\testfolder\youtube_test.py:26: DeprecationWarning: find_element_by_* commands are deprecated. Please use find_element() instead
+  self.browser.find_element_by_id('search').send_keys("edureka")
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 3, Pass: 0, Error: 3 -- Duration: 43.69 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
