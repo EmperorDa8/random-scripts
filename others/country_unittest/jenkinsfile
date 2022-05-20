@@ -3,7 +3,7 @@ agent any
 stages {
     stage ('GIT Checkout'){
         steps {
-            git changelog: false, poll: false, url: ''
+            git changelog: false, poll: false, url: 'https://github.com/EmperorDa8/random-scripts/tree/main/others/country_unittest.git'
         }
     }
     
