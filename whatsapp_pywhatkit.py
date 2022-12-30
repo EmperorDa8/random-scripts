@@ -1,5 +1,5 @@
 import pywhatkit
-import schedule
+#import schedule
 import requests
 from bs4 import BeautifulSoup
 import datetime
@@ -8,8 +8,8 @@ import datetime
 date=datetime.datetime.now()
 
 data={}
-def scrap_job():
-    link="https://www.jumia.com.ng/vodka/"
+def scrap_job(link):
+    #link="https://www.jumia.com.ng/vodka/"
     rr=requests.get(link)
     s=BeautifulSoup(rr.text, "html.parser")
     things=s.find_all("div",class_="info")
@@ -19,6 +19,9 @@ def scrap_job():
         data[name]=prices
     return data
 
-scrap_job()
-pywhatkit.sendwhatmsg("+2348060495841",str(data),date.hour,date.minute+1)
-print("sent!")
+#scrap_job()
+
+if __name__ == "__main__" :
+    scrap_job()
+    pywhatkit.sendwhatmsg("+2348060495841",str(data),date.hour,date.minute+1)
+    print("sent!")

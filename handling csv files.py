@@ -8,7 +8,7 @@ def read_employees(csv_file_location):
       for data in employee_file:
             data=data.keys
             employee_list.append(data)
-      return (employee_list)
+      return employee_list
 
 def process_data(employee_list):
       department_list = []

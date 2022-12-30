@@ -21,11 +21,11 @@ def download():
         Label(root,text="download completed",font="arial 22",bg="green",fg="red").place(x=180,y=470)
 
 # icon
-icon_image=PhotoImage(file="youicon.png")
+icon_image=PhotoImage(file="C:\\Users\\HP\\Downloads\\youtube-logo-png-31812.png")
 root.iconphoto(False,icon_image)
 
 # logo 
-logo_img=PhotoImage(file="youicon.png")
+logo_img=PhotoImage(file="C:\\Users\\HP\\Downloads\\youtube-logo-png-31812.png")
 logo_label=Label(root,image=logo_img,background="black").pack(padx=5,pady=5)
 
 
