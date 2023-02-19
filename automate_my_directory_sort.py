@@ -1,38 +1,27 @@
 from pathlib import Path
 import sys
 
-textfolder=[]
-csvfolder=[]
-jsonfiles=[]
-jpgfiles=[]
-pngfiles=[]
-totalfiles=[]
-
-sys_path=sys.argv[1]
-
 def arrange_files(sys_path):
-    files_path=Path(sys_path)
-    grand=files_path.iterdir()
-# for loop to list files in in directory into a list 
-    for file in grand:
-        totalfiles.append(file)
-        print(totalfiles)
-        # this loop iterate through the above list and sort according to their extension
-        for x in totalfiles:
+    file_extensions = {
+        ".csv": [],
+        ".json": [],
+        ".txt": [],
+        ".png": [],
+        ".jpg": []
+    }
     
-            if x.suffix == ".csv":
-                csvfolder.append(x.name)
-            elif x.suffix == ".json":
-                jsonfiles.append(x.name)
-            elif x.suffix == ".txt":
-                textfolder.append(x.name)
-            elif x.suffix == ".png":
-                pngfiles.append(x.name)
-            elif x.suffix == ".jpg":
-                jpgfiles.append(x.name)
-            else:
-                pass
-            print("process done!")
+    files_path = Path(sys_path)
+    for file in files_path.iterdir():
+        if file.suffix in file_extensions:
+            file_extensions[file.suffix].append(file.name)
+    
+    print("Process done!")
+    return file_extensions[".csv"], file_extensions[".json"], file_extensions[".txt"], file_extensions[".png"], file_extensions[".jpg"]
+
+if __name__ == "__main__":
+    csv_files, json_files, txt_files, png_files, jpg_files = arrange_files(sys.argv[1])
+    print(csv_files, json_files, txt_files, png_files, jpg_files)
+
             return csvfolder, jsonfiles, textfolder, pngfiles, jpgfiles
 
 
